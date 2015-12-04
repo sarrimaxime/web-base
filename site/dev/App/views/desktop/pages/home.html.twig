@@ -1,0 +1,15 @@
+{% extends ajax ? "desktop/default/empty.html.twig" : "desktop/default/layout.html.twig" %}
+
+{% block content %}
+
+<div class="center">
+index
+
+{% set src = 'assets/medias/test/iceland.jpg' %}
+{% if file_exists(src) %}
+<img src="{{ src }}" />
+{% endif %}
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,42 @@
+
+
+body {
+	background : $bg-color;
+	font:400 13px/23px $font-family;
+}
+
+.ajaxContainer {
+	overflow:hidden;
+	position:relative;
+	padding:100px 0;
+}
+
+// -----------------------------------------o
+
+a {
+	color:$black;
+
+	&:hover, &:active {
+		border-bottom:1px solid $black;
+	}
+}
+
+.no-transition {
+	transition:all 0ms $linear 0ms !important;
+
+	* {
+		transition:all 0ms $linear 0ms !important;
+	}
+}
+
+.center {
+	position:relative;
+	width:960px;
+	margin:0 auto;
+
+	img {
+		display:block;
+		width:100%;
+	}
+}
+

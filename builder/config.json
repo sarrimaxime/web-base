@@ -1,0 +1,126 @@
+{
+
+	"src": "../src/",
+	"dest": "../site/dev",
+	"dist": "../site/dev",
+
+	"scripts": [
+		{
+			"coffee": {
+				"src": [
+					"coffee/shared/data/**/*.coffee",
+					"coffee/shared/core/**/*.coffee",
+					"coffee/shared/utils/**/*.coffee",
+					"coffee/desktop/**/*.coffee"
+				],
+				"dest": "js/desktop",
+				"filename": "script.coffee"
+			},
+			"javascript": {
+				"src": [
+					"js/shared/libs/jquery/jquery-2.1.1.min.js",
+					"js/shared/libs/utils/**/*.js",
+					"js/desktop/script.js"
+				],
+				"dest": "../site/dev/assets/js",
+				"filename": "script.js"
+			}
+		},
+		{
+			"coffee": {
+				"src": [ 
+					"coffee/components/**/*.coffee",
+					"coffee/styleguide/Styleguide.coffee"
+				],
+				"dest": "js/styleguide",
+				"filename": "script.coffee"
+			},
+			"javascript": {
+				"src": [
+					"js/styleguide/script.js"
+				],
+				"dest": "../site/styleguide/assets/js",
+				"filename": "script.toolkit.js"
+			}
+		}
+	],
+
+	"styles": [
+		{
+			"src": ["scss/style.scss"],
+			"dest": "../site/dev/assets/css"
+		},
+		{
+			"src": ["scss/style.toolkit.scss"],
+			"dest": "../site/styleguide/assets/css"
+		}
+	],
+
+	"sprite": [
+		{
+			"type": "png",
+			"src": [
+				"sprite/shared/x1/**/*.png",
+				"sprite/desktop/x1/**/*.png"
+			],
+			"dest": "../site/dev/assets/img/sprite",
+			"cssDest": "scss/desktop/",
+			"filename": "sprite.png",
+			"stylename": "sprite.scss"
+		}
+	],
+
+	"favicons": {
+		"src": "favicons/",
+		"dest": "../site/dev/assets/favicons/",
+		"type": [
+			{
+				"name": "apple-touch-icon",
+				"ext": ".png",
+				"sizes": [16, 32, 96, 160, 192]
+			},
+			{
+				"name": "favicon",
+				"ext": ".png",
+				"sizes": [57, 60, 72, 76, 114, 120, 144, 152, 180]
+			},
+			{
+				"name": "ms-tile",
+				"ext": ".png",
+				"sizes": [144]
+			}
+		]
+	},
+
+	"image": [
+		{
+			"src": "medias/**/*",
+			"dest": "../site/dev/assets/medias"
+		}
+	],
+
+	"styleguide": {
+		"src": {
+			"scripts": {
+				"fabricator": [
+					"../src/styleguide/fabricator/scripts/prism.js",
+					"../src/styleguide/fabricator/scripts/fabricator.js"
+				],
+				"toolkit": "../src/styleguide/toolkit/assets/scripts/toolkit.js"
+			},
+			"styles": {
+				"fabricator": "../src/styleguide/fabricator/styles/fabricator.scss",
+				"toolkit": "../src/scss/style.toolkit.scss"
+			},
+			"images": "../src/styleguide/toolkit/assets/images/**/*",
+			"views": "../src/styleguide/toolkit/views/*.html",
+			"materials": [
+				"components",
+				"structures",
+				"templates",
+				"documentation"
+			]
+		},
+		"dest": "../site/styleguide"
+	}
+}

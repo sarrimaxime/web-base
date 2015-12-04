@@ -1,0 +1,12 @@
+{
+	"meta": {
+		"title": "head title",
+		"description": "description"
+	},
+
+	"gaId": "google analytics id",
+
+	"twitter": {
+		"username": "gea"
+	}
+}
